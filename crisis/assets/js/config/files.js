@@ -9,8 +9,8 @@ window.cache = "?v=" + new Date().getTime();
 window.HOST = {
     localhost: /\d+\.\d+\.\d+\.\d/.test(location.hostname) || /^localhost/.test(location.hostname) || /^design.devel.com/.test(location.hostname),    
     publish: /^ux-yhnews-crisis.realsn.com/.test(location.hostname) ,
-    develop: /^ux-yhnews-crisis.devel.com/.test(location.hostname),
-    product: /^ux-yhnews-crisis.realsn.com/.test(location.hostname),
+    develop: /^rsnp2.realsn.com/.test(location.hostname),
+    product: /^rsnp.premiumnews.co.kr/.test(location.hostname),
 };
 
 
