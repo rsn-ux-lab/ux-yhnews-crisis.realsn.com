@@ -1,5 +1,5 @@
 
-<!-- reBuild :  20230102161852 -->
+<!-- reBuild :  20230103165750 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="/crisis/assets/css/style.css">
 
   <!-- JS -->
-  <script src="/crisis/assets/js/config/files.js?v=20230102161852" defer></script>
-  <script src="/crisis/assets/js/libs.js?v=20230102161852" defer></script>
-  <script src="/crisis/assets/js/modules.js?v=20230102161852" defer></script>
-  <script src="/crisis/assets/js/config/router.js?v=20230102161852" defer></script>
+  <script src="/crisis/assets/js/config/files.js?v=20230103165750" defer></script>
+  <script src="/crisis/assets/js/libs.js?v=20230103165750" defer></script>
+  <script src="/crisis/assets/js/modules.js?v=20230103165750" defer></script>
+  <script src="/crisis/assets/js/config/router.js?v=20230103165750" defer></script>
 </head>
 
 <body>
@@ -118,29 +118,25 @@
           <header class="l-article-header visually-hidden">
             <h4 class="l-article-header__title">기사 정렬 선택</h4>
           </header>
-          <main class="l-article-body row g-5">
-            <div class="col-18 col-all">      
-              <button class="btn btn-news" type="button">
+          <main class="l-article-body">
+            <div class="row">
+              <button class="btn btn-news btn-news--is-active btn-news--all" type="button">
                 <span class="tit">전체 기사량</span>
                 <strong class="count">655,300</strong>
                 <span class="cmt">*현재시간 기준 최근 12시간의 기사량 추이</span>
                 <div class="js-chart h-100"></div>
               </button>
             </div>
-            <div class="col-6 col-portal">
-              <button class="btn btn-news" type="button">
+            <div class="row">
+              <button class="btn btn-news btn-news--portal" type="button">
                 <span class="tit">포털 노출</span>
                 <strong class="count">12,786</strong>
               </button>
-            </div>
-            <div class="col-6 col-comment">
-              <button class="btn btn-news" type="button">
+              <button class="g-col-6 btn btn-news btn-news--comment" type="button">
                 <span class="tit">댓글 건수</span>
                 <strong class="count">205</strong>
               </button>
-            </div>
-            <div class="col-6 col-negative">
-              <button class="btn btn-news" type="button">
+              <button class="g-col-6 btn btn-news btn-news--negative" type="button">
                 <span class="tit">부정 기사량</span>
                 <strong class="count">62</strong>
               </button>
@@ -173,27 +169,32 @@
                   <col width="10%" />
                   <col width="3.574%" />
                   <col width="5.142%" />
+                  <col width="*" />
+                  <col width="*" />
+                  <col width="*" />
                 </colgroup>
                 <thead>
                   <tr>
+                    <th>감성</th>
                     <th>출처</th>
                     <th>제목</th>
                     <th>수집일시</th>
-                    <th>감성</th>
-                    <th>유사</th>
+                    <th>포탈</th>
+                    <th>포탈 댓글 건수</th>
+                    <th>포탈 부정 댓글</th>
+                    <th>유사기사</th>
                   </tr>
                 </thead>
                 <tbody>          
                   <tr>
-                    <td class="text-center"><p class="sources d-inline-block" data-tooltip-text="네이버카페"><span class="clamp-1">네이버카페</span></p></td>
-                    <td>
-                      <a href="#" class="link" target="_blank" data-tooltip-text="Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next Squid Game Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Big raNext ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Big ra..">
-                        <span class="clamp-1 pay_media">dsfsdf‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next ‘<mark style="--color: #8b3244">Squid Game</mark>?’ Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Big raNext ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Next ‘Squid Game?’ Big ratings on Netflix boosts hope for next. Big ra.. </span>
-                      </a>
-                    </td>
-                    <td class="text-center">2022-07-01 12:43</td>
-                    <td class="text-center"> <i class="icon-circle" style="--color-set: #5BA1E0" aria-hidden="true" title=""></i> </td>
-                    <td class="text-center"><a class="link" onclick="$.modal({ isExist: true, className: 'data-table--similar' })">205</a></td>
+                    <td></td>
+                    <td><p data-tooltip-text="연합뉴스"><span class="clamp-1">연합뉴스</span></p></td>
+                    <td><a href="#" class="link" target="_blank" data-tooltip-text="제1회 광주 사회적경제 박람회 개막"><span class="clamp-1">제1회 광주 사회적경제 박람회 개막</span></a></td>
+                    <td>12-16 11:18</td>
+                    <td></td>
+                    <td><button href="#" class="link" type="button">612</button></td>
+                    <td><button href="#" class="link" type="button">26</button></td>
+                    <td>2</td>
                   </tr>     
                 </tbody>
               </table>
