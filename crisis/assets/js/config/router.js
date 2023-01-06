@@ -1,8 +1,12 @@
 /* JS loader */
 const routes = [
   {
-    path: "/crisis",
-    script: `${SERVER.assets}/js/pages/crisis.js`,
+    path: "/overview",
+    script: `${SERVER.assets}/js/pages/overview.js`,
+  },
+  {
+    path: "/404",
+    script: `${SERVER.assets}/js/pages/404.js`,
   },
 ];
 

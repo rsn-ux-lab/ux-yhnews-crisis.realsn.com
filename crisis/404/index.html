@@ -1,5 +1,5 @@
 
-<!-- reBuild :  20230104140621 -->
+<!-- reBuild :  20230106170601 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="/crisis/assets/css/style.css">
 
   <!-- JS -->
-  <script src="/crisis/assets/js/config/files.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/libs.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/modules.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/config/router.js?v=20230104140621" defer></script>
+  <script src="/crisis/assets/js/config/files.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/libs.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/charts.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/modules.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/config/router.js?v=20230106170601" defer></script>
 </head>
 
 <body>
@@ -99,8 +100,25 @@
 <!-- //#header -->
 
 <!-- #container -->
-<main id="container" class="member" role="main">
-  <h2>404</h2>
+<main id="container" class="not-found" role="main">
+  <h2 class="visually-hidden">페이지를 찾을 수 없습니다.</h2>
+
+  <!-- 404 -->
+  <section class="l-section">
+    <main class="l-section-body">
+      <div class="inner-fluid row">
+        <article class="l-article col-12 mx-auto">
+          <header class="l-article-header">
+            <h3><span class="point-color">Not</span> Found</h3>
+          </header>
+          <main class="l-article-body">
+            <span>잘못된 경로로 접근하셨습니다.<br />올바른 경로로 서비스를 이용해 주십시오.</span>
+          </main>
+        </article>
+      </div>
+    </main>
+  </section>
+  <!-- //404 -->
 </main>
 <!-- //#container -->
 

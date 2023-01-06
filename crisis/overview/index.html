@@ -1,5 +1,5 @@
 
-<!-- reBuild :  20230104140621 -->
+<!-- reBuild :  20230106170601 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="/crisis/assets/css/style.css">
 
   <!-- JS -->
-  <script src="/crisis/assets/js/config/files.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/libs.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/modules.js?v=20230104140621" defer></script>
-  <script src="/crisis/assets/js/config/router.js?v=20230104140621" defer></script>
+  <script src="/crisis/assets/js/config/files.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/libs.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/charts.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/modules.js?v=20230106170601" defer></script>
+  <script src="/crisis/assets/js/config/router.js?v=20230106170601" defer></script>
 </head>
 
 <body>
@@ -99,7 +100,7 @@
 <!-- //#header -->
 
 <!-- #container -->
-<main id="container" class="crisis" role="main">
+<main id="container" class="overview" role="main">
   <h2 class="visually-hidden">위기관리시스템</h2>
 
   <!-- 기사현황 -->
@@ -114,7 +115,7 @@
       </header>
       <main class="l-section-body row g-5">
         <!-- 기사정렬선택 -->
-        <article class="l-article l-article-nav col-18 col-lg-9" data-card="기사정렬선택" data-loding-spinner="false" data-is-empty="false">
+        <article class="l-article l-article-nav col-18 col-xxl-9" data-card="기사정렬선택" data-loding-spinner="false" data-is-empty="false">
           <header class="l-article-header visually-hidden">
             <h4 class="l-article-header__title">기사 정렬 선택</h4>
           </header>
@@ -124,7 +125,7 @@
                 <span class="tit">전체 기사량</span>
                 <strong class="count">655,300</strong>
                 <span class="cmt">*현재시간 기준 최근 12시간의 기사량 추이</span>
-                <div class="js-chart h-100"></div>
+                <div class="js-chart"></div>
               </button>
             </div>
             <div class="row">
@@ -146,7 +147,18 @@
         <!-- //기사정렬선택 -->
 
         <!-- 전체기사목록 -->
-        <article class="l-article l-article-table col-18 col-lg-9" data-card="전체기사목록" data-loding-spinner="false" data-is-empty="false">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <article class="l-article l-article-table col-18 col-xxl-9" data-card="전체기사목록" data-loding-spinner="false" data-is-empty="false">
           <header class="l-article-header">
             <h4 class="l-article-header__title">전체 기사 목록</h4>
             <fieldset class="form-fieldset d-flex ms-auto mr-12">      
@@ -164,14 +176,14 @@
             <div class="scroll-container">
               <table class="c-table" data-thead-sticky="true">
                 <colgroup>
-                  <col width="15%" />
+                  <col width="4.4%" style="min-width:4.5rem" />
+                  <col width="10.7%" style="min-width:9rem"/>
                   <col width="*" />
-                  <col width="10%" />
-                  <col width="3.574%" />
-                  <col width="5.142%" />
-                  <col width="*" />
-                  <col width="*" />
-                  <col width="*" />
+                  <col width="8.7%" style="min-width:9rem"/>
+                  <col width="8.2%"  style="min-width:9.5rem"/>
+                  <col width="10%" style="min-width:10rem"/>
+                  <col width="10%" style="min-width:10rem"/>
+                  <col width="7.1%" style="min-width:6.8rem" />
                 </colgroup>
                 <thead>
                   <tr>
@@ -180,22 +192,48 @@
                     <th>제목</th>
                     <th>수집일시</th>
                     <th>포탈</th>
-                    <th>포탈 댓글 건수</th>
-                    <th>포탈 부정 댓글</th>
-                    <th>유사기사</th>
+                    <th>포탈 댓글<br class="d-block d-lg-none">건수</th>
+                    <th>포탈 부정<br class="d-block d-lg-none">댓글</th>
+                    <th>유사<br class="d-block d-lg-none">기사</th>
                   </tr>
                 </thead>
                 <tbody>          
-                  <tr>
-                    <td></td>
-                    <td><p data-tooltip-text="연합뉴스"><span class="clamp-1">연합뉴스</span></p></td>
-                    <td><a href="#" class="link" target="_blank" data-tooltip-text="제1회 광주 사회적경제 박람회 개막"><span class="clamp-1">제1회 광주 사회적경제 박람회 개막</span></a></td>
-                    <td>12-16 11:18</td>
-                    <td></td>
-                    <td><button href="#" class="link" type="button">612</button></td>
-                    <td><button href="#" class="link" type="button">26</button></td>
-                    <td>2</td>
-                  </tr>     
+                  
+          <tr>
+            <td class="text-center"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+            <td class="text-center"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+            <td><a href="#" class="link" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+            <td class="text-center">12-16 11:18</td>
+            <td class="text-center"></td>
+            <td class="text-center"><button href="#" class="link" type="button">612</button></td>
+            <td class="text-center"><button href="#" class="link" type="button">26</button></td>
+            <td class="text-center">2</td>
+          </tr> 
+        
+                  
+          <tr>
+            <td class="text-center"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
+            <td class="text-center"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
+            <td><a href="#" class="link" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+            <td class="text-center">12-16 11:18</td>
+            <td class="text-center"></td>
+            <td class="text-center"><button href="#" class="link" type="button">-</button></td>
+            <td class="text-center"><button href="#" class="link" type="button">-</button></td>
+            <td class="text-center">10</td>
+          </tr> 
+        
+                  
+          <tr>
+            <td class="text-center"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
+            <td class="text-center"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+            <td><a href="#" class="link" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+            <td class="text-center">12-16 11:18</td>
+            <td class="text-center"></td>
+            <td class="text-center"><button href="#" class="link" type="button">7</button></td>
+            <td class="text-center"><button href="#" class="link" type="button">500</button></td>
+            <td class="text-center">-</td>
+          </tr> 
+          
                 </tbody>
               </table>
             </div>
@@ -236,7 +274,7 @@
       </header>
       <main class="l-section-body row g-5">
         <!-- 검색매체별추이 -->
-        <article class="l-article l-article-trend col-18 col-lg-9" data-card="검색매체별추이" data-loding-spinner="false" data-is-empty="false">
+        <article class="l-article l-article-trend col-18 col-xxl-9" data-card="검색매체별추이" data-loding-spinner="false" data-is-empty="false">
           <header class="l-article-header">
             <h4 class="l-article-header__title">검색매체 별 추이</h4>
             <p class="l-article-header__comment">*현재시간 기준 최근 12시간의 기사량 추이</p>
@@ -248,18 +286,18 @@
         <!-- //검색매체별추이 -->
 
         <!-- 검색매체별점유율 -->
-        <article class="l-article-share col-18 col-lg-4" data-card="검색매체별점유율" data-loding-spinner="false" data-is-empty="false">
+        <article class="l-article-share col-18 col-xxl-4" data-card="검색매체별점유율" data-loding-spinner="false" data-is-empty="false">
           <header class="l-article-header">
             <h4 class="l-article-header__title">검색매체 별 점유율</h4>
           </header>
           <main class="l-article-body">
-            <div class="js-chart h-100 p-20">차트영역</div>
+            <div class="js-chart p-20" style="height: 40rem">차트영역</div>
           </main>
         </article>
         <!-- //검색매체별점유율 -->
 
         <!-- 데이터목록 -->
-        <article class="l-article l col-18 col-lg-5" data-card="데이터목록" data-loding-spinner="false" data-is-empty="false">
+        <article class="l-article l col-18 col-xxl-5" data-card="데이터목록" data-loding-spinner="false" data-is-empty="false">
           <header class="l-article-header">
             <h4 class="l-article-header__title">데이터 목록</h4>
             <fieldset class="form-fieldset d-flex ms-auto mr-12">      
