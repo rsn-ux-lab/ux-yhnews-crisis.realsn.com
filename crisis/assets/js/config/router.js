@@ -1,16 +1,13 @@
 /* JS loader */
 const routes = [
   {
-    path: "/overview",
-    script: `${SERVER.assets}/js/pages/overview.js`,
-  },
-  {
-    path: "/404",
-    script: `${SERVER.assets}/js/pages/404.js`,
+    path: "/crisis/",
+    script: `${SERVER.assets}/js/pages/crisis.js`,
   },
 ];
+const url = location.pathname;
+const hasPath = routes.filter((_route) => {
+  return Array.isArray(_route.path) ? _route.path.find((_path) => _path === url) : _route.path === url;
+});
 
-const url = location.pathname.match(/(?<=\/\s*).*?(?=\s*\/)/gs);
-const hasPath = routes.find((_route) => _route.path.replace(/\//g, "") === url[url.length - 1]);
-
-if (hasPath) window.loadScript({ src: hasPath.script });
+if (hasPath[0]) window.loadScript({ src: hasPath[0].script });
