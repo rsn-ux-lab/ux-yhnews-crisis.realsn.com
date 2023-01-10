@@ -3,7 +3,7 @@ console.log("crisis.js");
 {
   const $section = document.querySelector('[data-section="기사현황"]');
   const $btns = $section.querySelectorAll(".btn");
-  const $chartDiv = $section.querySelector(".js-chart");
+  const $chartDiv = $section.querySelector(".js-chart-inner");
 
   // 버튼 액티브 이벤트 추가
   for (let i = 0; i < $btns.length; i++) $btns[i].addEventListener("click", btnClickActive);

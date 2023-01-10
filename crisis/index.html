@@ -1,12 +1,12 @@
 
-<!-- reBuild :  20230110221550 -->
+<!-- reBuild :  20230111010703 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=991" />
-  <title>Crisis</title>
+  <title>연합뉴스 - 위기관리시스템</title>
 
   <!-- SEO -->
   <meta name="robots" content="noindex,nofollow"> 
@@ -18,15 +18,16 @@
   <link rel="stylesheet" href="/crisis/assets/css/style.css">
 
   <!-- JS -->
-  <script src="/crisis/assets/js/config/files.js?v=20230110221550" defer></script>
-  <script src="/crisis/assets/js/libs.js?v=20230110221550" defer></script>
-  <script src="/crisis/assets/js/charts.js?v=20230110221550" defer></script>
-  <script src="/crisis/assets/js/modules.js?v=20230110221550" defer></script>
-  <script src="/crisis/assets/js/config/router.js?v=20230110221550" defer></script>
+  <script src="/crisis/assets/js/config/files.js?v=20230111010703" defer></script>
+  <script src="/crisis/assets/js/libs.js?v=20230111010703" defer></script>
+  <script src="/crisis/assets/js/charts.js?v=20230111010703" defer></script>
+  <script src="/crisis/assets/js/modules.js?v=20230111010703" defer></script>
+  <script src="/crisis/assets/js/config/router.js?v=20230111010703" defer></script>
 </head>
 
 <body>
-<!-- 페이지 로딩 -->
+
+<!-- loading page -->
 <aside id="loadingWrap">
   <div class="content">
     <div class="img"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -59,8 +60,8 @@
       }
   </style>
 </aside>
+<!-- //loading page -->
 
-<!-- //페이지 로딩 -->
 
 <!-- #wrap -->
 <div id="wrap" data-target-device="pc" user-scalable="false" style="opacity: 0; visibility: hidden;">
@@ -100,33 +101,36 @@
 </header>
 <!-- //#header -->
 
-
+<!-- #container -->
 <main id="container" class="crisis" role="main">
   <h2 class="visually-hidden">위기관리시스템</h2>
-
   
-  <section class="l-section l-section-allnews" data-section="기사현황" style="--secColor: #407ae8">
-    <div class="inner-fluid">
-      <header class="l-section-header">
-        <h3 class="l-section-header__title">기사 현황</h3>
-        <div class="l-section-header__update d-flex ms-auto">
-          <p class="msg"><span class="count">00:07</span>초 전 정보입니다.</p>
-          <button class="btn btn-update" type="button" title="최신기사 불러오기"></button>
-        </div>
-      </header>
-      <main class="l-section-body row g-5">
-        
-        <article class="l-article l-article-nav col-18 col-xxl-9" data-card="기사정렬선택" data-loding-spinner="false" data-is-empty="false">
+<!-- 기사현황 -->
+<section class="l-section l-section-allnews" data-section="기사현황" style="--secColor: #407ae8">
+  <div class="inner-fluid">
+    <header class="l-section-header">
+      <h3 class="l-section-header__title">기사 현황</h3>
+      <div class="l-section-header__update d-flex ms-auto">
+        <p class="msg"><span class="count">00:07</span>초 전 정보입니다.</p>
+        <button class="btn btn-update" type="button" title="최신기사 불러오기"></button>
+      </div>
+    </header>
+    <main class="l-section-body row g-5">            
+      
+<!-- 기사정렬선택 -->      
+<article class="l-article l-article-nav col-18 col-xxl-9" data-card="기사정렬선택">
   <header class="l-article-header visually-hidden">
     <h4 class="l-article-header__title">기사 정렬 선택</h4>
   </header>
-  <main class="l-article-body">
+  <main class="l-article-body" data-loding-spinner="false" data-is-empty="false">
     <div class="row">
       <button class="btn btn-news btn-news--is-active btn-news--all" type="button">
         <span class="tit">전체 기사량</span>
         <strong class="count">655,300</strong>
         <span class="cmt">*현재시간 기준 최근 12시간의 기사량 추이</span>
-        <div class="js-chart"></div>
+        <div class="js-chart h-100 pt-10 pb-10">
+          <div class="js-chart-inner h-100"></div>
+        </div>        
       </button>
     </div>
     <div class="row">
@@ -145,27 +149,13 @@
     </div>
   </main>
 </article>
-        
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- //기사정렬선택 -->      
+      
+<!-- 전체기사목록 -->
 <article class="l-article l-article-table col-18 col-xxl-9" data-card="전체기사목록" >
   <header class="l-article-header">
     <h4 class="l-article-header__title">전체 기사 목록</h4>
-    <fieldset class="form-fieldset d-flex ms-auto mr-12">      
+    <fieldset class="form-fieldset d-flex ms-auto mr-12">
       <div class="form-row form-select" data-row="기본정렬">
         <select class="form-select__select">
           <option value="0" selected>10건 씩 보기</option>
@@ -201,213 +191,225 @@
             <th>유사<br class="d-block d-lg-none">기사</th>
           </tr>
         </thead>
-        <tbody>          
+        <tbody>
           
-  <tr class="c-table-article__tr--negative">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
-  </tr> 
-
+<!-- 부정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
+</tr>
+<!-- //부정기사 -->
           
-  <tr class="c-table-article__tr--negative c-table-article__tr--similar">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">유사기사</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">                
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"></td>
-  </tr> 
-
+<!-- 부정기사 in 유사기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative c-table-article__tr--similar">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">유사기사</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"></td>
+</tr>
+<!-- //부정기사 in 유사기사 -->
           
-  <tr class="c-table-article__tr--negative c-table-article__tr--similar">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">유사기사</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">                
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"></td>
-  </tr> 
-
+<!-- 부정기사 in 유사기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative c-table-article__tr--similar">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">유사기사</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"></td>
+</tr>
+<!-- //부정기사 in 유사기사 -->
           
-  <tr class="c-table-article__tr--negative">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
-  </tr> 
+<!-- 부정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
+</tr>
+<!-- //부정기사 -->
           
+<!-- 중립기사 -->
+<tr class="c-table-article__tr c-table-article__tr--neutral">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
+</tr>
+<!-- //중립기사 -->
           
-  <tr class="c-table-article__tr--neutral">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">        
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
-  </tr> 
-
+<!-- 긍정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--positive">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"></td>
+</tr>
+<!-- //긍정기사 -->
           
-  <tr class="c-table-article__tr--positive">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"></td>
-  </tr> 
-  
+<!-- 부정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
+</tr>
+<!-- //부정기사 -->
           
-  <tr class="c-table-article__tr--negative">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
-  </tr> 
+<!-- 중립기사 -->
+<tr class="c-table-article__tr c-table-article__tr--neutral">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
+</tr>
+<!-- //중립기사 -->
           
+<!-- 긍정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--positive">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"></td>
+</tr>
+<!-- //긍정기사 -->
           
-  <tr class="c-table-article__tr--neutral">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">        
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
-  </tr> 
-
+<!-- 부정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--negative">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-negative" title="부정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+      <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>
+    </div>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
+</tr>
+<!-- //부정기사 -->
           
-  <tr class="c-table-article__tr--positive">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"></td>
-  </tr> 
-  
+<!-- 중립기사 -->
+<tr class="c-table-article__tr c-table-article__tr--neutral">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
+</tr>
+<!-- //중립기사 -->
           
-  <tr class="c-table-article__tr--negative">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-negative" title="부정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
-        <button class="btn btn-nate" type="button"><i class="icon-svg-logo-nate" title="네이트 댓글보기"></i></button>      
-      </div>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">612</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">26</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">2</button></td>
-  </tr> 
-          
-          
-  <tr class="c-table-article__tr--neutral">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-neutral" title="중립"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매채명 긴경우에는 1줄 말줄임"><span class="clamp-1">매채명 긴경우에는 1줄 말줄임</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다."><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">        
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"><button class="btn" type="button">10</button></td>
-  </tr> 
-
-          
-  <tr class="c-table-article__tr--positive">
-    <td class="c-table-article__td"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
-    <td class="c-table-article__td"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
-    <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
-    <td class="c-table-article__td">12-16 11:18</td>
-    <td class="c-table-article__td">
-      <div class="btn-area">
-        <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
-        <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>            
-      </div>
-    </td>
-    <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
-    <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
-    <td class="c-table-article__td c-table-article__td--simila-count"></td>
-  </tr> 
-  
+<!-- 긍정기사 -->
+<tr class="c-table-article__tr c-table-article__tr--positive">
+  <td class="c-table-article__td c-table-article__td--emotion"><i class="icon-svg-emotion-positive" title="긍정"></i></td>
+  <td class="c-table-article__td c-table-article__td--sources"><p class="d-inline-block" data-tooltip-text="매체명"><span class="clamp-1">매체명</span></p></td>
+  <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 짧은 경우</span></a></td>
+  <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+  <td class="c-table-article__td c-table-article__td--portal">
+    <div class="btn-area">
+      <button class="btn btn-naver" type="button"><i class="icon-svg-logo-naver" title="네이버 댓글보기"></i></button>
+      <button class="btn btn-daum" type="button"><i class="icon-svg-logo-daum" title="다음 댓글보기"></i></button>
+    </div>
+  </td>
+  <td class="c-table-article__td c-table-article__td--comment-count"><button class="btn text-underline-hover" type="button">7</button></td>
+  <td class="c-table-article__td c-table-article__td--negative-count"><button class="btn text-underline-hover" type="button">500</button></td>
+  <td class="c-table-article__td c-table-article__td--simila-count"></td>
+</tr>
+<!-- //긍정기사 -->          
         </tbody>
       </table>
     </div>
   </main>
-  <footer class="l-article-footer">
+  <footer class="l-article-footer">    
     
-    
+<!-- pagination -->
 <ol class="c-pagination">
   <li class="c-pagination__item c-pagination__item--first"><button class="c-pagination__btn" type="button" title="이전 10개 페이지" disabled><i class="icon-svg-chevrons-left" aria-hidden="true"></i></button></li>
   <li class="c-pagination__item c-pagination__item--prev"><button class="c-pagination__btn" type="button" title="이전 페이지" disabled><i class="icon-svg-chevron-left" aria-hidden="true"></i></button></li>
@@ -424,47 +426,48 @@
   <li class="c-pagination__item c-pagination__item--next"><button class="c-pagination__btn" type="button" title="다음 페이지"><i class="icon-svg-chevron-right" aria-hidden="true"></i></button></li>
   <li class="c-pagination__item c-pagination__item--last"><button class="c-pagination__btn" type="button" title="다음 10개 페이지"><i class="icon-svg-chevrons-right" aria-hidden="true"></i></button></li>
 </ol>
-
+<!-- //pagination -->
   </footer>
 </article>
-        
-      </main>
-    </div>
-  </section>
+<!-- //전체기사목록 -->      
+    </main>
+  </div>
+</section>
+<!-- //기사현황 -->
   
+<!-- SNS현황 -->
+<section class="l-section l-section-sns" data-section="sns현황" style="--secColor: #f4b91f">
+  <div class="inner-fluid">
+    <header class="l-section-header">
+      <h3 class="l-section-header__title">sns 현황</h3>
+    </header>
+    <main class="l-section-body row g-5">
+      <!-- 검색매체별추이 -->
+      <article class="l-article l-article-trend col-18 col-xxl-9" >
+        <header class="l-article-header">
+          <h4 class="l-article-header__title">검색매체 별 추이</h4>
+          <p class="l-article-header__comment">*현재시간 기준 최근 12시간의 기사량 추이</p>
+        </header>
+        <main class="l-article-body p-20" data-card="검색매체별추이" data-loding-spinner="false" data-is-empty="false">
+          <div class="js-chart h-100">차트영역</div>
+        </main>
+      </article>
+      <!-- //검색매체별추이 -->
 
-  
-  <section class="l-section l-section-sns" data-section="sns현황" style="--secColor: #f4b91f">
-    <div class="inner-fluid">
-      <header class="l-section-header">
-        <h3 class="l-section-header__title">sns 현황</h3>
-      </header>
-      <main class="l-section-body row g-5">
-        
-        <article class="l-article l-article-trend col-18 col-xxl-9" data-card="검색매체별추이" data-loding-spinner="false" data-is-empty="false">
-          <header class="l-article-header">
-            <h4 class="l-article-header__title">검색매체 별 추이</h4>
-            <p class="l-article-header__comment">*현재시간 기준 최근 12시간의 기사량 추이</p>
-          </header>
-          <main class="l-article-body p-20">
-            <div class="js-chart h-100">차트영역</div>
-          </main>
-        </article>
-        
+      <!-- 검색매체별점유율 -->
+      <article class="l-article l-article-share col-18 col-xxl-4" >
+        <header class="l-article-header">
+          <h4 class="l-article-header__title">검색매체 별 점유율</h4>
+        </header>
+        <main class="l-article-body p-20" data-card="검색매체별점유율" data-loding-spinner="false" data-is-empty="false">
+          <div class="js-chart h-100">차트영역</div>
+        </main>
+      </article>
+      <!-- //검색매체별점유율 -->
 
-        
-        <article class="l-article-share col-18 col-xxl-4" data-card="검색매체별점유율" data-loding-spinner="false" data-is-empty="false">
-          <header class="l-article-header">
-            <h4 class="l-article-header__title">검색매체 별 점유율</h4>
-          </header>
-          <main class="l-article-body p-20">
-            <div class="js-chart h-100" style="height: 40rem">차트영역</div>
-          </main>
-        </article>
-        
-
-        
-        <article class="l-article l col-18 col-xxl-5" data-card="데이터목록" data-loding-spinner="false" data-is-empty="false">
+      
+<!-- 데이터목록 -->
+<article class="l-article l-article-table l col-18 col-xxl-5" data-card="데이터목록" data-loding-spinner="false" data-is-empty="false">
   <header class="l-article-header">
     <h4 class="l-article-header__title">데이터 목록</h4>
     <fieldset class="form-fieldset d-flex ms-auto mr-12">      
@@ -478,19 +481,105 @@
     </fieldset>
     <p class="l-article-header__total">Total. <strong class="count">480</strong>건 (1/2)</p>
   </header>
-  <main class="l-article-body">
-    <div class="js-chart h-100 p-20">ㅇㄹㅇㄴ</div>
-  </main>
-</article>
-        
-      </main>
+  <main class="l-article-body" data-loding-spinner="false" data-is-empty="false">
+    <div class="scroll-container">
+      <table class="c-table c-table-article" data-thead-sticky="true">
+        <colgroup>
+          <col width="20.2%" style="min-width:10rem"/>
+          <col width="*" />
+          <col width="16.2%" style="min-width:9rem"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>검색매체</th>
+            <th>내용</th>
+            <th>수집일시</th>          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#666699">블로그/포스트</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#33CC00">기업/단체</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#6D0C9E">인스타그램</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#CC0000">트위터</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#CC6699">정부/공공기관</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#46A3A3">카카오스토리</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#666699">블로그/포스트</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#33CC00">기업/단체</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 긴 경우 1줄 말줄임이 적용됩니다. 제목이 긴 경우 1줄 말줄임이 적용됩니다.</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#6D0C9E">인스타그램</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+          <tr>
+            <td class="c-table-article__td c-table-article__td--sources" style="--color:#CC0000">트위터</td>
+            <td class="c-table-article__td c-table-article__td--title"><a href="#" class="text-underline-hover" target="_blank" data-tooltip-text="제목이 짧은 경우"><span class="clamp-1">제목이 <mark style="--color:#407AE8">짧은</mark> 경우</span></a></td>
+            <td class="c-table-article__td c-table-article__td--date">12-16 11:18</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
-  
-
-  
+  </main>
+  <footer class="l-article-footer">    
+    
+<!-- pagination -->
+<ol class="c-pagination">
+  <li class="c-pagination__item c-pagination__item--first"><button class="c-pagination__btn" type="button" title="이전 10개 페이지" disabled><i class="icon-svg-chevrons-left" aria-hidden="true"></i></button></li>
+  <li class="c-pagination__item c-pagination__item--prev"><button class="c-pagination__btn" type="button" title="이전 페이지" disabled><i class="icon-svg-chevron-left" aria-hidden="true"></i></button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn c-pagination__btn--is-active" type="button">1</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">2</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">3</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">4</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">5</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">6</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">7</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">8</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">9</button></li>
+  <li class="c-pagination__item"><button class="c-pagination__btn" type="button">10</button></li>
+  <li class="c-pagination__item c-pagination__item--next"><button class="c-pagination__btn" type="button" title="다음 페이지"><i class="icon-svg-chevron-right" aria-hidden="true"></i></button></li>
+  <li class="c-pagination__item c-pagination__item--last"><button class="c-pagination__btn" type="button" title="다음 10개 페이지"><i class="icon-svg-chevrons-right" aria-hidden="true"></i></button></li>
+</ol>
+<!-- //pagination -->
+  </footer>
+</article>
+<!-- //데이터목록 -->
+    </main>
+  </div>
+</section>
+<!-- //SNS현황 -->
 </main>
-
+<!-- //#container -->
 
 <!-- #footer -->
 <footer id="footer" class="footer visually-hidden" role="contentinfo">(C) Yonhapnews</footer>
